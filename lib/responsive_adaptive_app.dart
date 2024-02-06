@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_adaptive/core/utils/app_themes.dart';
 import 'package:responsive_adaptive/views/dashboard_view.dart';
 
 class ResponsiveAdaptiveApp extends StatelessWidget {
@@ -6,9 +7,10 @@ class ResponsiveAdaptiveApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: DashboardView(),
+      theme: AppThemes.appTheme,
+      home: const DashboardView(),
     );
   }
 }
