@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:responsive_adaptive/constants.dart';
 import 'package:responsive_adaptive/widgets/drawer_item.dart';
 
-class DrawerItemsSliverListView extends StatefulWidget {
-  const DrawerItemsSliverListView({super.key});
+class DrawerItemsSliverList extends StatefulWidget {
+  const DrawerItemsSliverList({super.key});
 
   @override
-  State<DrawerItemsSliverListView> createState() =>
-      _DrawerItemsSliverListViewState();
+  State<DrawerItemsSliverList> createState() => _DrawerItemsSliverListState();
 }
 
-class _DrawerItemsSliverListViewState extends State<DrawerItemsSliverListView> {
+class _DrawerItemsSliverListState extends State<DrawerItemsSliverList> {
   int activeIndex = 0;
 
   @override

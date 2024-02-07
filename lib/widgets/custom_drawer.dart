@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_adaptive/core/utils/app_assets.dart';
 import 'package:responsive_adaptive/models/drawer_item_model.dart';
 import 'package:responsive_adaptive/widgets/drawer_item.dart';
-import 'package:responsive_adaptive/widgets/drawer_items_sliver_list_view.dart';
+import 'package:responsive_adaptive/widgets/drawer_items_sliver_list.dart';
 import 'package:responsive_adaptive/widgets/user_info_list_tile.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -22,7 +22,7 @@ class CustomDrawer extends StatelessWidget {
             ),
           ),
           SliverToBoxAdapter(child: SizedBox(height: 8)),
-          DrawerItemsSliverListView(),
+          DrawerItemsSliverList(),
           SliverFillRemaining(
             hasScrollBody: false,
             child: Column(children: <Widget>[
