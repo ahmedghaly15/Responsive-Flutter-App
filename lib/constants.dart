@@ -1,11 +1,12 @@
 import 'package:responsive_adaptive/core/utils/app_assets.dart';
 import 'package:responsive_adaptive/models/all_expenses_model.dart';
 import 'package:responsive_adaptive/models/drawer_item_model.dart';
+import 'package:responsive_adaptive/models/latest_transaction_model.dart';
 
 class Constants {
   Constants._();
 
-  static const drawerItems = <DrawerIteModel>[
+  static const List<DrawerIteModel> drawerItems = <DrawerIteModel>[
     DrawerIteModel(
       title: 'Dashboard',
       image: AppAssets.imagesDashboard,
@@ -28,7 +29,7 @@ class Constants {
     ),
   ];
 
-  static const allExpensesItems = <AllExpensesModel>[
+  static const List<AllExpensesModel> allExpensesItems = <AllExpensesModel>[
     AllExpensesModel(
       title: 'Balance',
       image: AppAssets.imagesBalance,
@@ -46,6 +47,25 @@ class Constants {
       image: AppAssets.imagesExpenses,
       date: 'April 2022',
       price: '20,129',
+    ),
+  ];
+
+  static const List<LatestTransactionModel> latestTransactionItems =
+      <LatestTransactionModel>[
+    LatestTransactionModel(
+      image: AppAssets.imagesAvatar1,
+      title: 'Madrani Andi',
+      subTitle: 'Madraniadi20@gmail',
+    ),
+    LatestTransactionModel(
+      image: AppAssets.imagesAvatar2,
+      title: 'Josua Nunito',
+      subTitle: 'Josh Nunito@gmail.com',
+    ),
+    LatestTransactionModel(
+      image: AppAssets.imagesAvatar1,
+      title: 'Madrani Andi',
+      subTitle: 'Madraniadi20@gmail',
     ),
   ];
 }
