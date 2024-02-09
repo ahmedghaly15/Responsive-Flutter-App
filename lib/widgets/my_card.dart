@@ -13,6 +13,7 @@ class MyCard extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           image: const DecorationImage(
+            fit: BoxFit.fill,
             image: AssetImage(AppAssets.imagesCardBackground),
           ),
           color: const Color(0xff4EB7F2),
