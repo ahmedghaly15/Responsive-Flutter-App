@@ -1,6 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:responsive_adaptive/core/utils/app_assets.dart';
 import 'package:responsive_adaptive/models/all_expenses_model.dart';
 import 'package:responsive_adaptive/models/drawer_item_model.dart';
+import 'package:responsive_adaptive/models/income_chart_details_model.dart';
 import 'package:responsive_adaptive/models/latest_transaction_model.dart';
 import 'package:responsive_adaptive/models/transaction_history_model.dart';
 
@@ -87,6 +89,30 @@ class Constants {
       title: 'Juni Mobile App project',
       date: '13 Apr, 2022 at 3:30 PM',
       amount: '20,129',
+    ),
+  ];
+
+  static const List<IncomeChartDetailsModel> incomeChartDetails =
+      <IncomeChartDetailsModel>[
+    IncomeChartDetailsModel(
+      color: Color(0xff208CC8),
+      title: 'Design service',
+      amount: 40,
+    ),
+    IncomeChartDetailsModel(
+      color: Color(0xff4EB7F2),
+      title: 'Design product',
+      amount: 25,
+    ),
+    IncomeChartDetailsModel(
+      color: Color(0xff064061),
+      title: 'Product royalti',
+      amount: 20,
+    ),
+    IncomeChartDetailsModel(
+      color: Color(0xffE2DECD),
+      title: 'Other',
+      amount: 22,
     ),
   ];
 }
