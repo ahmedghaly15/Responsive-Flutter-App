@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_adaptive/core/utils/app_styles.dart';
+import 'package:responsive_adaptive/core/widgets/custom_divider.dart';
 import 'package:responsive_adaptive/core/widgets/custom_main_container.dart';
 import 'package:responsive_adaptive/widgets/quick_invoice_form.dart';
 import 'package:responsive_adaptive/widgets/latest_transaction_items.dart';
@@ -22,11 +23,7 @@ class QuickInvoice extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           const LatestTransactionItems(),
-          const Divider(
-            // Make height 48 means that it has 24 above and below it
-            height: 48,
-            color: Color(0xffF1F1F1),
-          ),
+          const CustomDivider(),
           const QuickInvoiceForm(),
         ],
       ),

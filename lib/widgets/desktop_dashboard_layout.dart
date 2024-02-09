@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_adaptive/widgets/all_expenses_and_quick_invoice_section.dart';
 import 'package:responsive_adaptive/widgets/custom_drawer.dart';
-import 'package:responsive_adaptive/widgets/my_card.dart';
-import 'package:responsive_adaptive/widgets/my_cards_page_view.dart';
+import 'package:responsive_adaptive/widgets/my_cards_and_transaction_history_section.dart';
+import 'package:responsive_adaptive/widgets/my_cards_section.dart';
 
 class DesktopDashboardLayout extends StatelessWidget {
   const DesktopDashboardLayout({super.key});
@@ -27,7 +27,7 @@ class DesktopDashboardLayout extends StatelessWidget {
                   width: 24,
                 ),
                 Expanded(
-                  child: MyCardsPageView(),
+                  child: MyCardsAndTransactionHistorySection(),
                 ),
               ],
             ),
