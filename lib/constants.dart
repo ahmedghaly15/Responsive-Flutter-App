@@ -2,6 +2,7 @@ import 'package:responsive_adaptive/core/utils/app_assets.dart';
 import 'package:responsive_adaptive/models/all_expenses_model.dart';
 import 'package:responsive_adaptive/models/drawer_item_model.dart';
 import 'package:responsive_adaptive/models/latest_transaction_model.dart';
+import 'package:responsive_adaptive/models/transaction_history_model.dart';
 
 class Constants {
   Constants._();
@@ -66,6 +67,26 @@ class Constants {
       image: AppAssets.imagesAvatar1,
       title: 'Madrani Andi',
       subTitle: 'Madraniadi20@gmail',
+    ),
+  ];
+
+  static const List<TransactionHistoryModel> transactionHistoryItems =
+      <TransactionHistoryModel>[
+    TransactionHistoryModel(
+      title: 'Cash Withdrawal',
+      date: '13 Apr, 2022',
+      amount: '20,129',
+      isWithdrawal: true,
+    ),
+    TransactionHistoryModel(
+      title: 'Landing Page project',
+      date: '13 Apr, 2022 at 3:30 PM',
+      amount: '2,000',
+    ),
+    TransactionHistoryModel(
+      title: 'Juni Mobile App project',
+      date: '13 Apr, 2022 at 3:30 PM',
+      amount: '20,129',
     ),
   ];
 }
