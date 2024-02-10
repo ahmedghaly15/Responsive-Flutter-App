@@ -15,9 +15,15 @@ class IncomeChartDetailsItem extends StatelessWidget {
         backgroundColor: incomeChartDetailsInfo.color,
         radius: 6,
       ),
-      title: Text(
-        incomeChartDetailsInfo.title,
-        style: AppStyles.styleRegular16(context),
+      title: FittedBox(
+        // Used FittedBox to avoid constrains on the Text widget
+        // Used BoxFit.scaleDown to make Text widget scale down to fit the constraints
+        fit: BoxFit.scaleDown,
+        alignment: Alignment.centerLeft,
+        child: Text(
+          incomeChartDetailsInfo.title,
+          style: AppStyles.styleRegular16(context),
+        ),
       ),
       trailing: Text(
         '${incomeChartDetailsInfo.amount}%',
