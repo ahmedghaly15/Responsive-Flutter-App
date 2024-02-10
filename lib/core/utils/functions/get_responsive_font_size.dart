@@ -4,7 +4,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_adaptive/core/utils/size_config.dart';
 
-double getResponsiveFontSize(context, {required double fontSize}) {
+double getResponsiveFontSize(BuildContext context, {required double fontSize}) {
   double scaleFactor = getScaleFactor(context);
   double responsiveFontSize = fontSize * scaleFactor;
 
@@ -14,7 +14,9 @@ double getResponsiveFontSize(context, {required double fontSize}) {
   return responsiveFontSize.clamp(lowerLimit, upperLimit);
 }
 
-double getScaleFactor(context) {
+double getScaleFactor(BuildContext context) {
+  // To get the same width of Media query use below steps :
+
   // var dispatcher = PlatformDispatcher.instance;
   // var physicalWidth = dispatcher.views.first.physicalSize.width;
   // var devicePixelRatio = dispatcher.views.first.devicePixelRatio;

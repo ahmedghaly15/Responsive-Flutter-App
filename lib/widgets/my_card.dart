@@ -48,26 +48,27 @@ class MyCard extends StatelessWidget {
             const Spacer(),
             Padding(
               padding: const EdgeInsets.only(right: 24),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Text(
-                    '0918 8124 0042 8129',
-                    style: AppStyles.styleSemiBold24(context).copyWith(
-                      color: Colors.white,
+              child: Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                      '0918 8124 0042 8129',
+                      style: AppStyles.styleSemiBold24(context).copyWith(
+                        color: Colors.white,
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 12),
-                  Text(
-                    '12/20 - 124',
-                    style: AppStyles.styleRegular16(context).copyWith(
-                      color: Colors.white,
+                    Text(
+                      '12/20 - 124',
+                      style: AppStyles.styleRegular16(context).copyWith(
+                        color: Colors.white,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-            const SizedBox(height: 27),
+            const Flexible(child: SizedBox()),
           ],
         ),
       ),
