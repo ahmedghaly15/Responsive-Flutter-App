@@ -7,13 +7,14 @@ class IncomeChartDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-      shrinkWrap: true,
-      itemCount: Constants.incomeChartDetails.length,
-      itemBuilder: (context, index) => IncomeChartDetailsItem(
-        incomeChartDetailsInfo: Constants.incomeChartDetails[index],
-      ),
-      separatorBuilder: (context, index) => const SizedBox(height: 12),
+    return Column(
+      children: Constants.incomeChartDetails
+          .map(
+            (e) => IncomeChartDetailsItem(
+              incomeChartDetailsInfo: e,
+            ),
+          )
+          .toList(),
     );
   }
 }
