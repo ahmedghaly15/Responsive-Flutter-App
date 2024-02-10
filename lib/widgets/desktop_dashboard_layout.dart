@@ -27,14 +27,13 @@ class DesktopDashboardLayout extends StatelessWidget {
                   width: 24,
                 ),
                 Expanded(
-                  child: IncomeSection(),
-                  // Column(
-                  //   children: <Widget>[
-                  //     MyCardsAndTransactionHistorySections(),
-                  //     SizedBox(height: 24),
-                  //     IncomeSection(),
-                  //   ],
-                  // ),
+                  child: Column(
+                    children: <Widget>[
+                      MyCardsAndTransactionHistorySections(),
+                      SizedBox(height: 24),
+                      Expanded(child: IncomeSection()),
+                    ],
+                  ),
                 ),
               ],
             ),

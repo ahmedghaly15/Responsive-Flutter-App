@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_adaptive/core/widgets/responsive_layout.dart';
+import 'package:responsive_adaptive/widgets/dashboard_tablet_layout.dart';
 import 'package:responsive_adaptive/widgets/desktop_dashboard_layout.dart';
 
 class DashboardView extends StatelessWidget {
@@ -11,7 +12,7 @@ class DashboardView extends StatelessWidget {
       backgroundColor: const Color(0xffF7F9FA),
       body: ResponsiveLayout(
         mobileLayout: (context) => const SizedBox(),
-        tabletLayout: (context) => const SizedBox(),
+        tabletLayout: (context) => const DashboardTabletLayout(),
         desktopLayout: (context) => const DesktopDashboardLayout(),
       ),
     );
