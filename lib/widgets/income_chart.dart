@@ -17,18 +17,21 @@ class _IncomeChartState extends State<IncomeChart> {
       aspectRatio: 1,
       child: PieChart(
         _getPieChartData(),
+        swapAnimationDuration: const Duration(milliseconds: 150),
       ),
     );
   }
 
   PieChartData _getPieChartData() {
     return PieChartData(
-      pieTouchData:
-          PieTouchData(touchCallback: (FlTouchEvent event, pieTouchResponse) {
-        activeIndex =
-            pieTouchResponse?.touchedSection?.touchedSectionIndex ?? -1;
-        setState(() {});
-      }),
+      pieTouchData: PieTouchData(
+        enabled: true,
+        touchCallback: (FlTouchEvent event, pieTouchResponse) {
+          activeIndex =
+              pieTouchResponse?.touchedSection?.touchedSectionIndex ?? -1;
+          setState(() {});
+        },
+      ),
       sectionsSpace: 0,
       sections: [
         PieChartSectionData(
