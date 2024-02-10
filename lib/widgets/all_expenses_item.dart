@@ -22,12 +22,14 @@ class AllExpensesItem extends StatelessWidget {
         horizontal: 20,
         vertical: 16,
       ),
-      margin: index != 0 ? const EdgeInsets.only(left: 12) : null,
       decoration: BoxDecoration(
         color: isActive ? const Color(0xff4EB7F2) : Colors.white,
         borderRadius: BorderRadius.circular(12),
         border: isActive
-            ? null
+            ? Border.all(
+                color: const Color(0xff4EB7F2),
+                width: 1,
+              )
             : Border.all(
                 color: const Color(0xffF1F1F1),
                 width: 1,
@@ -39,11 +41,15 @@ class AllExpensesItem extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              CircleAvatar(
-                radius: 30,
-                backgroundColor:
-                    isActive ? Colors.white : const Color(0xffF1F1F1),
-                child: SvgPicture.asset(allExpensesInfo.image),
+              Flexible(
+                child: CircleAvatar(
+                  radius: 30,
+                  backgroundColor:
+                      isActive ? Colors.white : const Color(0xffF1F1F1),
+                  child: Center(
+                    child: SvgPicture.asset(allExpensesInfo.image),
+                  ),
+                ),
               ),
               Icon(
                 Icons.arrow_forward_ios_outlined,
@@ -54,32 +60,50 @@ class AllExpensesItem extends StatelessWidget {
           const SizedBox(
             height: 34,
           ),
-          Text(
-            allExpensesInfo.title,
-            style: isActive
-                ? AppStyles.styleSemiBold16(context)
-                    .copyWith(color: Colors.white)
-                : AppStyles.styleSemiBold16(context),
+          FittedBox(
+            // Used FittedBox to avoid constrains on the Text widget
+            // Used BoxFit.scaleDown to make Text widget scale down to fit the constraints
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              allExpensesInfo.title,
+              style: isActive
+                  ? AppStyles.styleSemiBold16(context)
+                      .copyWith(color: Colors.white)
+                  : AppStyles.styleSemiBold16(context),
+            ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            allExpensesInfo.date,
-            style: isActive
-                ? AppStyles.styleRegular14(context)
-                    .copyWith(color: Colors.white)
-                : AppStyles.styleRegular14(context),
+          FittedBox(
+            // Used FittedBox to avoid constrains on the Text widget
+            // Used BoxFit.scaleDown to make Text widget scale down to fit the constraints
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              allExpensesInfo.date,
+              style: isActive
+                  ? AppStyles.styleRegular14(context)
+                      .copyWith(color: Colors.white)
+                  : AppStyles.styleRegular14(context),
+            ),
           ),
           const SizedBox(
             height: 16,
           ),
-          Text(
-            '\$${allExpensesInfo.price}',
-            style: isActive
-                ? AppStyles.styleSemiBold24(context)
-                    .copyWith(color: Colors.white)
-                : AppStyles.styleSemiBold24(context),
+          FittedBox(
+            // Used FittedBox to avoid constrains on the Text widget
+            // Used BoxFit.scaleDown to make Text widget scale down to fit the constraints
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              '\$${allExpensesInfo.price}',
+              style: isActive
+                  ? AppStyles.styleSemiBold24(context)
+                      .copyWith(color: Colors.white)
+                  : AppStyles.styleSemiBold24(context),
+            ),
           ),
         ],
       ),
